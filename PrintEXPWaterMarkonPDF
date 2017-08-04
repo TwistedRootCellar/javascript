@@ -1,5 +1,5 @@
 // This script will add the date when the document is printed, but will remain hidden while open.)
-// Under the When this happens… field, highlight the Document Will Print and select Edit
+// Under the "When this happens…" field, highlight the Document "Will Print" and select Edit
 var f = this.getField("PrintField");
 f.hidden = false;
 var m_names = new Array("JAN", "FEB",
@@ -14,12 +14,12 @@ f.value = (" Printed document expires by end of day " +
 curr_date + m_names[curr_month] + curr_year.toString().substr(-2));
 
 // This script will clear the form after printing
-//Under the When this happens… field, highlight the Document Did Print and select Edit
+//Under the "When this happens…" field, highlight the Document "Did Print" and select Edit
 this.resetForm() ;
 
 // This script will insert a warning message when a user attempts to save a copy of the document
 // For this portion -- credit to murthysrn from https://forums.asp.net/t/1192206.aspx?How+to+give+Yes+no+option+message+box+using+javascript+
-// Under the When this happens… field, highlight the Document Will Save and select Edit
+// Under the "When this happens…" field, highlight the Document "Will Save" and select Edit
 // Test field value for numeric value
 event.rc = !isNaN(event.value);
 if(!event.rc && !this.hideWarning1) {
